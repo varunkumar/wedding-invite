@@ -1,0 +1,180 @@
+/* make sure horizontal scrollbars don't pop up because hearts stray over the edge */
+body { 
+  overflow-x: hidden;
+}
+
+/* hearts container */
+#hearts-container-left, #hearts-container-right {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+}
+
+#hearts-container-left {
+  left: -15px;
+}
+
+#hearts-container-right {
+  right: 210px;
+}
+
+/* default animation and transform */
+.heart-left, .heart-right {
+  position: fixed;
+  display: inline-block;
+  z-index: 1000;
+  color: rgb(212, 90, 90);
+  opacity: 0.5;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  -webkit-transform-origin: left -20px;
+  -moz-transform-origin: left -20px;
+}
+.heart-left {
+  -webkit-animation: falling-left 7.7s linear 2s;
+  -moz-animation: falling-left 7.7s linear 2s;
+}
+
+.heart-right {
+  -webkit-animation: falling-right 7.7s linear 2s;
+  -moz-animation: falling-right 7.7s linear 2s;
+}
+
+@-webkit-keyframes falling-left {
+  0% { 
+    -webkit-transform: translate3d(120px,0,0) rotate(0deg);
+    bottom: 215px;
+  }
+  100% { 
+    -webkit-transform: translate3d(0,1000px,0) rotate(360deg);
+  } 
+}
+
+@-moz-keyframes falling-left {
+  0% { 
+    -webkit-transform: translate3d(120px,0,0) rotate(0deg);
+    bottom: 215px;
+  }
+  100% { 
+    -webkit-transform: translate3d(0,1000px,0) rotate(360deg);
+  } 
+}
+
+@-webkit-keyframes falling-right {
+  100% { 
+    -webkit-transform: translate3d(0,0,0) rotate(0deg);
+  }
+  0% { 
+    -webkit-transform: translate3d(0,1000px,0) rotate(360deg);
+    bottom: 224px;
+  } 
+}
+
+@-moz-keyframes falling-right {
+  100% { 
+    -moz-transform: translate3d(0,0,0) rotate(0deg);
+  }
+  0% { 
+    -moz-transform: translate(0,1000px) rotate(360deg);
+    bottom: 224px;
+  } 
+}
+
+/* different sizes, and default origins based on size */
+.heart-large {
+  height:11px;
+  width:11px;
+  -webkit-transform-origin: top -30px;
+  -moz-transform-origin: top -30px;
+}
+.heart-medium {
+  height:9px;
+  width:9px;
+  -webkit-transform-origin: top -30px;
+  -moz-transform-origin: top -30px;
+}
+.heart-small {
+  height:5px;
+  width:5px;
+  -webkit-transform-origin: 0 -30px;
+  -moz-transform-origin: 0 -30px;
+}
+
+/* different speeds so flakes look just that much different */
+.heart-speed-slow {
+  -webkit-animation-duration: 7.1s; 
+  -webkit-transform-origin: -20px -10px;
+  -moz-animation-duration: 7.1s; 
+  -moz-transform-origin: -20px -10px;
+}
+.heart-speed-medium {
+  -webkit-animation-duration: 6.6s; 
+  -webkit-animation-iteration-count: 2;
+  -webkit-transform-origin: -20px -10px;
+  -moz-animation-duration: 6.6s; 
+  -moz-animation-iteration-count: 2;
+  -moz-transform-origin: -20px -10px;
+}
+.heart-speed-fast {
+  -webkit-animation-duration: 5.9s; 
+  -webkit-animation-iteration-count: 2;
+  -webkit-transform-origin: -20px -10px;
+  -moz-animation-duration: 5.9s; 
+  -moz-animation-iteration-count: 2;
+  -moz-transform-origin: -20px -10px;
+}
+
+/* different opacities so flakes look just that much different */
+.heart-faint {
+  opacity: 0.1;
+}
+.heart-ight {
+  opacity: 0.3;
+}
+.heart-dark {
+  opacity: 0.7;
+}
+
+/* different delays so they don't all start at the same time */
+.heart-delay-1 {
+  -webkit-animation-delay: 3.4s;
+  -moz-animation-delay: 3.4s;
+}
+.heart-delay-2 {
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+}
+.heart-delay-3 {
+  -webkit-animation-delay: 4.6s;
+  -moz-animation-delay: 4.6s;
+}
+.heart-delay-4 {
+  -webkit-animation-delay: 6.3s;
+  -moz-animation-delay: 6.3s;
+}
+.heart-delay-5 {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+}
+.heart-delay-6 {
+  -webkit-animation-delay: 8.1s;
+  -moz-animation-delay: 8.1s;
+}
+
+/* playing with timing functions to make it a teeny bit more random like */
+.heart-large.heart-delay-2 {-webkit-animation-timing-function:ease-in-out;}
+.heart-large.heart-delay-1 {-webkit-animation-timing-function:ease-out;}
+.heart-large.heart-delay-2 {-moz-animation-timing-function:ease-in-out;}
+.heart-large.heart-delay-1 {-moz-animation-timing-function:ease-out;}
+
+/* playing with opacity to make it a teeny bit more random like */
+.heart-speed-medium.heart-delay-2 {opacity: 0.5}
+.heart-speed-medium.heart-delay-1 {opacity: 0.3}
+.heart-speed-fast.heart-delay-2 {opacity: 0.7}
+.heart-speed-fast.heart-delay-1 {opacity: 0.6;
+  -webkit-animation-timing-function:ease-in;
+  -webkit-transform-origin: top 10px;
+  -moz-animation-timing-function:ease-in;
+  -moz-transform-origin: top 10px;}
+.heart-speed-slow {opacity: 0.8}
