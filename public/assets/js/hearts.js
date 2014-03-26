@@ -60,10 +60,16 @@ Hearts.prototype.updateKeyframeHeight = function() {
       else
         newRule = "0% { -webkit-transform: translate3d("+width+"px,0px,0) rotate(360deg); bottom: 224px;}";
     } else if (keyframes.cssText.match(new RegExp('moz'))) {
-      newRule = "-moz-transform: translate("+width+"px,0px) rotate(360deg);";
+      if (this.direction == "left")
+        newRule = "100% { -moz-transform: translate3d("+width+"px,0px,0) rotate(360deg);}";
+      else
+        newRule = "0% { -moz-transform: translate3d("+width+"px,0px,0) rotate(360deg); bottom: 224px;}";
     }
 
-    keyframes.insertRule(newRule);
+    if (keyframes.insertRule)
+      keyframes.insertRule(newRule);
+    else if (keyframes.appendRule)
+      keyframes.appendRule(newRule);
   }
 }
 
