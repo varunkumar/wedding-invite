@@ -49,11 +49,11 @@ Hearts.prototype.updateKeyframeHeight = function() {
       width = window.innerWidth;
     }
 
-    var framePosition = "0%";
+    /*var framePosition = "0%";
     if (this.direction == "left")
       framePosition = "100%";
 
-    /*var newRule = "";
+    var newRule = "";
     if (keyframes.cssText.match(new RegExp('webkit'))) {
       if (this.direction == "left")
         newRule = "100% { -webkit-transform: translate3d("+width+"px,0px,0) rotate(360deg);}";
