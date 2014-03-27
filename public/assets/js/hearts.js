@@ -27,7 +27,7 @@ Hearts.prototype.findKeyframeAnimation = function(a) {
                      [];
 
             for (var j = rs.length - 1; j >= 0; j--) {
-                if ((rs[j].type === window.CSSRule.WEBKIT_KEYFRAMES_RULE || rs[j].type === window.CSSRule.MOZ_KEYFRAMES_RULE) && rs[j].name == a){
+                if ((rs[j].type === window.CSSRule.WEBKIT_KEYFRAMES_RULE || rs[j].type === window.CSSRule.MOZ_KEYFRAMES_RULE || rs[j].type === window.CSSRule.KEYFRAMES_RULE) && rs[j].name == a){
                     return rs[j];
                 }
             }

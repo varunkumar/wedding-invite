@@ -61,6 +61,16 @@ body {
   } 
 }
 
+@keyframes falling-left {
+  0% { 
+    transform: translate3d(120px,0,0) rotate(0deg);
+    bottom: 215px;
+  }
+  100% { 
+    transform: translate3d(0,1000px,0) rotate(360deg);
+  } 
+}
+
 @-webkit-keyframes falling-right {
   100% { 
     -webkit-transform: translate3d(0,0,0) rotate(0deg);
@@ -77,6 +87,16 @@ body {
   }
   0% { 
     -moz-transform: translate(0,1000px) rotate(360deg);
+    bottom: 224px;
+  } 
+}
+
+@keyframes falling-right {
+  100% { 
+    transform: translate3d(0,0,0) rotate(0deg);
+  }
+  0% { 
+    transform: translate(0,1000px) rotate(360deg);
     bottom: 224px;
   } 
 }
