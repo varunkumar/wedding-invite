@@ -3,6 +3,8 @@ Varun & Divvy
 
 Wedding invite site with cool CSS3 animations and JS mouse tracking features. Hover over the robots at the bottom to check out the heart animation and other animations on the robot. 
 
+Check out the site [here](http://divvy.varunkumar.me)
+
 ToDo
 ----
 - Use grunt for managing the static resources
