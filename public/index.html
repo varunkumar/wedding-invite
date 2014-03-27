@@ -89,28 +89,42 @@
               <td>Lunch</td>
             </tr>
           </tbody>
-        </table>
-        <a href="#home">Top</a>
+        </table><br/>
+        <center>We would love to celebrate with you! Please RSVP.<br/>
+          <a href="javascript:$('#ss-form').toggle('slow');" class="lnk-rsvp">Count me in</a><br/><br/>
+        </center>
+        <form action="https://docs.google.com/forms/d/1vYXFgw_c4NHof0ajLO2xAaewArgE3njMHCe6kmjzkzA/formResponse" method="POST" id="ss-form" target="_blank" style="border: 1px dashed #036; padding: 10px; width: 100%; box-shadow: 0px 0px 5px; display: none;">
+          Full Name
+          <input type="text" name="entry.1966493469" id="txtName" value="" aria-label="Name  " title=""> &nbsp;
+          E-Mail
+          <input type="email" name="entry.1283578206" id="txtMail" value="" aria-label="Email  " title=""><span style="padding-left: 10px;"><a href="javascript:void(0);" id="ss-submit">Submit</a></span><br/>
+          Need accomodation?&nbsp;&nbsp;
+          <input type="radio" name="entry.217197101" value="Family" aria-label="Family">Yes, I will come with my family&nbsp;&nbsp;
+          <input type="radio" name="entry.217197101" value="Single" aria-label="Single">Yes, I will come alone&nbsp;&nbsp;
+          <input type="radio" name="entry.217197101" value="Not Needed" aria-label="Not Needed">No, not needed<br/>
+        </form>
+        <div class="spacer"></div>  
+        <span style="float: right;"><a href="#home">Top</a></span>
 
       </div>
       <div class="spacer"></div>
     </div>
-    <div id="hearts-container-left"></div>
-    <div id="hearts-container-right"></div>
+    <div id="hearts-container-left" class="extra"></div>
+    <div id="hearts-container-right" class="extra"></div>
 
     <!-- male robot -->
-    <img class="male-robot male-robot-body" src="assets/img/male-robot-body.png" style="position: fixed; left: 0px; bottom: 45px"/>
-    <img class="male-robot male-robot-head animated" src="assets/img/male-robot-head.png" style="position: fixed; left: 53px; bottom: 103px" />
-    <div class="eye" style="position: fixed; bottom: 150px; left: 131px;" data-center-left="131" data-center-bottom="150">&nbsp;</div>
-    <div class="eye" style="position: fixed; bottom: 150px; left: 162px;" data-center-left="162" data-center-bottom="150">&nbsp;</div>
+    <img class="male-robot male-robot-body extra" src="assets/img/male-robot-body.png" style="position: fixed; left: 0px; bottom: 45px"/>
+    <img class="male-robot male-robot-head animated extra" src="assets/img/male-robot-head.png" style="position: fixed; left: 53px; bottom: 103px" />
+    <div class="eye extra" style="position: fixed; bottom: 150px; left: 131px;" data-center-left="131" data-center-bottom="150">&nbsp;</div>
+    <div class="eye extra" style="position: fixed; bottom: 150px; left: 162px;" data-center-left="162" data-center-bottom="150">&nbsp;</div>
 
     <!-- female robot -->
-    <img class="female-robot female-robot-body" src="assets/img/female-robot-body.png" style="position: fixed; right: 0px; bottom: 45px"/>
-    <img class="female-robot female-robot-head animated" src="assets/img/female-robot-head.png" style="position: fixed; right: 61px; bottom: 103px"/>
-    <div class="eye" style="position: fixed; bottom: 158px; right: 131px;" data-center-right="131" data-center-bottom="158">&nbsp;</div>
-    <div class="eye" style="position: fixed; bottom: 158px; right: 164px;" data-center-right="164" data-center-bottom="158">&nbsp;</div>
+    <img class="female-robot female-robot-body extra" src="assets/img/female-robot-body.png" style="position: fixed; right: 0px; bottom: 45px"/>
+    <img class="female-robot female-robot-head animated extra" src="assets/img/female-robot-head.png" style="position: fixed; right: 61px; bottom: 103px"/>
+    <div class="eye extra" style="position: fixed; bottom: 158px; right: 131px;" data-center-right="131" data-center-bottom="158">&nbsp;</div>
+    <div class="eye extra" style="position: fixed; bottom: 158px; right: 164px;" data-center-right="164" data-center-bottom="158">&nbsp;</div>
 
-    <div id="tmp" style="position: fixed; top: 0px; right: 0px;"></div>
+    <!--div id="tmp" style="position: fixed; top: 0px; right: 0px;"></div-->
 
     <footer>
       <table style="width: 100%">

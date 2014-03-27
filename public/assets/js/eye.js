@@ -18,7 +18,7 @@ $(document).ready(function() {
       var toCenterdistance = getDistance(eyePosition, mousePosition);
       var targetDistance = toCenterdistance - ($(this).width() / 2);
 
-      $("#tmp").html("X: " + mousePosition.x + ", Y: " + mousePosition.y + "<br/>" + toCenterdistance);
+      //$("#tmp").html("X: " + mousePosition.x + ", Y: " + mousePosition.y + "<br/>" + toCenterdistance);
 
       if(toCenterdistance > ($(this).width() / 2)) {
         var x = Math.cos(Math.atan(slope)) * targetDistance;
