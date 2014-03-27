@@ -53,7 +53,7 @@ Hearts.prototype.updateKeyframeHeight = function() {
     if (this.direction == "left")
       framePosition = "100%";
 
-    var newRule = "";
+    /*var newRule = "";
     if (keyframes.cssText.match(new RegExp('webkit'))) {
       if (this.direction == "left")
         newRule = "100% { -webkit-transform: translate3d("+width+"px,0px,0) rotate(360deg);}";
@@ -65,11 +65,27 @@ Hearts.prototype.updateKeyframeHeight = function() {
       else
         newRule = "0% { -moz-transform: translate3d("+width+"px,0px,0) rotate(360deg); bottom: 224px;}";
     }
+    keyframes.insertRule(newRule);*/
 
-    if (keyframes.insertRule)
-      keyframes.insertRule(newRule);
-    else if (keyframes.appendRule)
-      keyframes.appendRule(newRule);
+    for(var i = 0; i < keyframes.cssRules.length; i++) {
+      var rule = keyframes.cssRules[i];
+      if (this.direction == "left") {
+        if (rule.keyText == "100%") {
+          rule.style.MozTransform = "translate3d("+width+"px,0px,0) rotate(360deg)";
+          rule.style.WebkitTransform = "translate3d("+width+"px,0px,0) rotate(360deg)";
+          rule.style.transform = "translate3d("+width+"px,0px,0) rotate(360deg)";
+          break;
+        }
+      } else {
+        if (rule.keyText == "0%") {
+          rule.style.MozTransform = "translate3d("+width+"px,0px,0) rotate(360deg)";
+          rule.style.WebkitTransform = "translate3d("+width+"px,0px,0) rotate(360deg)";
+          rule.style.transform = "translate3d("+width+"px,0px,0) rotate(360deg)";
+          rule.style.bottom = "224px";
+          break;
+        }
+      }
+    }
   }
 }
 
