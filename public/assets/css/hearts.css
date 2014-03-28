@@ -67,6 +67,7 @@ body {
 @keyframes falling-left {
   0% { 
     transform: translate3d(120px,0,0) rotate(0deg);
+    -webkit-transform: translate3d(120px,0,0) rotate(0deg);
     bottom: 215px;
   }
   100% { 
@@ -97,6 +98,7 @@ body {
 @keyframes falling-right {
   100% { 
     transform: translate3d(0,0,0) rotate(0deg);
+    -webkit-transform: translate3d(0,0,0) rotate(0deg);
   }
   0% { 
     transform: translate(0,1000px) rotate(360deg);
